@@ -6,6 +6,20 @@
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Charles Barkley",
+            "breed": "Pit Bull",
+            "customerId": 2,
+            "locationId": 2
+        },
+        {
+            "id": 3,
+            "name": "Roofus",
+            "breed": "Mutt",
+            "customerId": 1,
+            "locationId": 2
         }
     ],
     "customers": [
@@ -13,9 +27,30 @@
             "id": 1,
             "name": "Hannah Hall",
             "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 2,
+            "name": "Keri Hilson",
+            "address": "Down the way"
+        },
+        {
+            "id": 3,
+            "name": "Rico",
+            "address": "Outer Space"
         }
     ],
-    "employees": [],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Kenny Kawaguchi",
+            "locationId": 1
+        },
+        {
+            "id": 2,
+            "name": "Spicy Pete",
+            "locationId": 2
+        }
+    ],
     "locations": [
         {
             "id": 1,
