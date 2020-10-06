@@ -1,66 +1,94 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 1,
-            "locationId": 2
-        },
-        {
-            "id": 2,
-            "name": "Charles Barkley",
-            "breed": "Pit Bull",
-            "customerId": 2,
-            "locationId": 2
-        },
-        {
-            "id": 3,
-            "name": "Roofus",
-            "breed": "Mutt",
-            "customerId": 1,
-            "locationId": 2
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Keri Hilson",
-            "address": "Down the way"
-        },
-        {
-            "id": 3,
-            "name": "Rico",
-            "address": "Outer Space"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Kenny Kawaguchi",
-            "locationId": 1
-        },
-        {
-            "id": 2,
-            "name": "Spicy Pete",
-            "locationId": 2
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 1,
+      "locationId": 2
+    },
+    {
+      "id": 2,
+      "name": "Charles Barkley",
+      "breed": "Pit Bull",
+      "customerId": 2,
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Roofus",
+      "breed": "Mutt",
+      "customerId": 1,
+      "locationId": 2
+    },
+    {
+      "name": "Timn",
+      "locationId": 2,
+      "customerId": 3,
+      "id": 4
+    },
+    {
+      "name": "Barry Sanders",
+      "locationId": 1,
+      "customerId": 1,
+      "id": 5
+    },
+    {
+      "name": "Kevin Jonas",
+      "locationId": 1,
+      "customerId": 2,
+      "id": 6
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 2,
+      "name": "Keri Hilson",
+      "address": "Down the way"
+    },
+    {
+      "id": 3,
+      "name": "Rico",
+      "address": "Outer Space"
+    },
+    {
+      "name": "Tony Danza",
+      "address": "Cool",
+      "id": 4
+    },
+    {
+      "name": "Derrick Jeter",
+      "address": "Yankeyz",
+      "id": 5
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Kenny Kawaguchi",
+      "locationId": 1
+    },
+    {
+      "id": 2,
+      "name": "Spicy Pete",
+      "locationId": 2
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    }
+  ]
 }
