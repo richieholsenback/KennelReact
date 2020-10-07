@@ -44,27 +44,20 @@
     {
       "id": 1,
       "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
+      "address": "7002 Chestnut Ct",
+      "email": "Hannah@Hall.com"
     },
     {
       "id": 2,
       "name": "Keri Hilson",
-      "address": "Down the way"
+      "address": "Down the way",
+      "email": "PrettyGirl@Rock.gov"
     },
     {
       "id": 3,
       "name": "Rico",
-      "address": "Outer Space"
-    },
-    {
-      "name": "Tony Danza",
-      "address": "Cool",
-      "id": 4
-    },
-    {
-      "name": "Derrick Jeter",
-      "address": "Yankeyz",
-      "id": 5
+      "address": "Outer Space",
+      "email": "SpaceBoy@SpiritAirlines.org"
     }
   ],
   "employees": [
@@ -82,6 +75,11 @@
       "name": "Mike Jones",
       "locationId": 1,
       "id": 3
+    },
+    {
+      "name": "Kate McKinnon",
+      "locationId": 3,
+      "id": 4
     }
   ],
   "locations": [
