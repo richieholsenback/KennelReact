@@ -10,7 +10,6 @@ export const EmployeeCard = ({ employee }) => (
                     {employee.name}
                 </Link>
             </h3>
-            <div className="employee__workplace">{employee.location.name}</div>
         </section>
     </>
 )

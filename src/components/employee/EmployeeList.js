@@ -24,7 +24,7 @@ export const EmployeeList = () => {
         Add Employee
       </button>
       <div className="employees">
-        {console.log("EmployeeList: Render")}
+        {/* {console.log("EmployeeList: Render")} */}
         {
           employees.map(employee => {
             return <EmployeeCard key={employee.id} location={employee.location.name} employee={employee} />

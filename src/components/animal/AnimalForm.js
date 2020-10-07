@@ -19,6 +19,7 @@ export const AnimalForm = (props) => {
         No more `document.querySelector()` in React.
     */
     const name = useRef(null)
+    const breed = useRef(null)
     const location = useRef(null)
     const customer = useRef(null)
 
@@ -26,7 +27,7 @@ export const AnimalForm = (props) => {
         Get animal state and location state on initialization.
     */
     useEffect(() => {
-       getCustomers().then(getLocations)
+        getCustomers().then(getLocations)
     }, [])
 
     const constructNewAnimal = () => {
@@ -44,10 +45,11 @@ export const AnimalForm = (props) => {
         } else {
             addAnimal({
                 name: name.current.value,
+                breed,
                 locationId,
                 customerId
             })
-            .then(() => history.push("/animals"))
+                .then(() => history.push("/animals"))
         }
     }
 
@@ -64,8 +66,14 @@ export const AnimalForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
+                    <label htmlFor="animalBreed">Animal breed: </label>
+                    <input type="text" id="animalBreed" ref={breed} required autoFocus className="form-control" placeholder="Animal breed" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
                     <label htmlFor="location">Assign to location: </label>
-                    <select defaultValue="" name="location" ref={location} id="animalLocation" className="form-control" >
+                    <select defaultValue="" name="location" ref={location} id="animalLocation" required className="form-control" >
                         <option value="0">Select a location</option>
                         {locations.map(l => (
                             <option key={l.id} value={l.id}>
@@ -90,7 +98,7 @@ export const AnimalForm = (props) => {
             </fieldset>
             <button type="button"
                 onClick={evt => {
-                    
+
                     constructNewAnimal()
                 }}
                 className="btn btn-primary">

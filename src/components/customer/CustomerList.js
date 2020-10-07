@@ -17,7 +17,7 @@ export const CustomerList = () => {
 
     return (	
 		<div className="customers">
-		    {console.log("CustomerList: Render")}
+		    {/* {console.log("CustomerList: Render")} */}
         {
 			customers.map(customer => {
 				return <CustomerCard key={customer.id} customer={customer} />

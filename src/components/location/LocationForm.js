@@ -31,7 +31,7 @@ export const LocationForm = (props) => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="locationAddress">Location address: </label>
-                    <input type="text" id="locationAddress" ref={address} required autoFocus className="form-control" placeholder="location address" />
+                    <input type="text" id="locationAddress" ref={address} required className="form-control" placeholder="location address" />
                 </div>
             </fieldset>
             <button type="button"

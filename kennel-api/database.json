@@ -1,13 +1,6 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "customerId": 1,
-      "locationId": 2
-    },
-    {
       "id": 2,
       "name": "Charles Barkley",
       "breed": "Pit Bull",
@@ -20,24 +13,6 @@
       "breed": "Mutt",
       "customerId": 1,
       "locationId": 2
-    },
-    {
-      "name": "Timn",
-      "locationId": 2,
-      "customerId": 3,
-      "id": 4
-    },
-    {
-      "name": "Barry Sanders",
-      "locationId": 1,
-      "customerId": 1,
-      "id": 5
-    },
-    {
-      "name": "Kevin Jonas",
-      "locationId": 1,
-      "customerId": 2,
-      "id": 6
     }
   ],
   "customers": [
@@ -58,6 +33,11 @@
       "name": "Rico",
       "address": "Outer Space",
       "email": "SpaceBoy@SpiritAirlines.org"
+    },
+    {
+      "email": "richieh@gmail.com",
+      "name": "Richie Holsenback",
+      "id": 4
     }
   ],
   "employees": [
