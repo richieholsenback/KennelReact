@@ -2,6 +2,7 @@ import React, { useContext, useRef, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import { EmployeeContext } from '../employee/EmployeeProvider'
 import { LocationContext } from "../location/LocationProvider"
+import "./Employee.css"
 
 export const EmployeeForm = (props) => {
     const { addEmployee } = useContext(EmployeeContext)
