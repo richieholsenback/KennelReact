@@ -19,9 +19,9 @@ export const EmployeeList = () => {
 
   return (
     <>
-    <h2>Animals</h2>
-      <button onClick={() => { history.push("/animals/create") }}>
-        Add Animal
+      <h2>Employees</h2>
+      <button onClick={() => { history.push("/employees/create") }}>
+        Add Employee
       </button>
       <div className="employees">
         {console.log("EmployeeList: Render")}

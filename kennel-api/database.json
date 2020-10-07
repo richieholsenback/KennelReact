@@ -77,6 +77,11 @@
       "id": 2,
       "name": "Spicy Pete",
       "locationId": 2
+    },
+    {
+      "name": "Mike Jones",
+      "locationId": 1,
+      "id": 3
     }
   ],
   "locations": [
