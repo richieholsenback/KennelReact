@@ -31,23 +31,11 @@ export const ApplicationViews = (props) => {
                 </Route>
             </AnimalProvider>
 
-            <CustomerProvider>
-                <Route exact path="/customers">
-                    <CustomerList />
+            <AnimalProvider>
+                <Route exact path="/animals/detail/:animalId(\d+)">
+                    <AnimalDetail />
                 </Route>
-            </CustomerProvider>
-
-            <LocationProvider>
-                <Route exact path="/locations">
-                    <LocationList />
-                </Route>
-            </LocationProvider>
-
-            <EmployeeProvider>
-                <Route exact path="/employees">
-                    <EmployeeList />
-                </Route>
-            </EmployeeProvider>
+            </AnimalProvider>
 
             <AnimalProvider>
                 <LocationProvider>
@@ -59,6 +47,62 @@ export const ApplicationViews = (props) => {
                 </LocationProvider>
             </AnimalProvider>
 
+            <AnimalProvider>
+                <LocationProvider>
+                    <CustomerProvider>
+                        <Route path="/animals/edit/:animalId(\d+)">
+                            <AnimalForm />
+                        </Route>
+                    </CustomerProvider>
+                </LocationProvider>
+            </AnimalProvider>
+
+
+
+            <CustomerProvider>
+                <Route exact path="/customers">
+                    <CustomerList />
+                </Route>
+            </CustomerProvider>
+
+
+
+            <LocationProvider>
+                <EmployeeProvider>
+                    <AnimalProvider>
+                        <Route exact path="/locations">
+                            <LocationList />
+                        </Route>
+                    </AnimalProvider>
+                </EmployeeProvider>
+            </LocationProvider>
+
+            <LocationProvider>
+                <Route exact path="/locations/create">
+                    <LocationForm />
+                </Route>
+            </LocationProvider>
+
+            <LocationProvider>
+                <Route exact path="/locations/detail/:locationId(\d+)">
+                    <LocationDetail />
+                </Route>
+            </LocationProvider>
+
+            <LocationProvider>
+                <Route path="/locations/edit/:locationId(\d+)">
+                    <LocationForm />
+                </Route>
+            </LocationProvider>
+
+
+
+            <EmployeeProvider>
+                <Route exact path="/employees">
+                    <EmployeeList />
+                </Route>
+            </EmployeeProvider>
+
             <EmployeeProvider>
                 <LocationProvider>
                     <Route exact path='/employees/create'>
@@ -67,39 +111,13 @@ export const ApplicationViews = (props) => {
                 </LocationProvider>
             </EmployeeProvider>
 
-            <LocationProvider>
-                <Route exact path="/locations/create">
-                    <LocationForm />
-                </Route>
-            </LocationProvider>
-
-            <AnimalProvider>
-                <Route exact path="/animals/detail/:animalId(\d+)">
-                    <AnimalDetail />
-                </Route>
-            </AnimalProvider>
-
-            <LocationProvider>
-                <Route exact path="/locations/detail/:locationId(\d+)">
-                    <LocationDetail />
-                </Route>
-            </LocationProvider>
-
             <EmployeeProvider>
                 <Route exact path="/employees/detail/:employeeId(\d+)">
                     <EmployeeDetail />
                 </Route>
             </EmployeeProvider>
 
-            <AnimalProvider>
-                <LocationProvider>
-                    <CustomerProvider>
-                    <Route path="/animals/edit/:animalId(\d+)">
-                        <AnimalForm />
-                    </Route>
-                    </CustomerProvider>
-                </LocationProvider>
-            </AnimalProvider>
+
         </>
     )
 }

@@ -4,8 +4,8 @@ import "./Location.css"
 import { useParams, useHistory } from "react-router-dom"
 
 export const LocationDetail = () => {
-    const { getLocationById, releaseLocation } = useContext(LocationContext)
-   
+    const { getLocationById, bulldozeLocation } = useContext(LocationContext)
+
     const [location, setLocation] = useState({})
     const [employees, setEmployees] = useState([])
     const [animals, setAnimals] = useState([])
@@ -44,12 +44,15 @@ export const LocationDetail = () => {
             </div>
             <button onClick={
                 () => {
-                    releaseLocation(location.id)
+                    bulldozeLocation(location.id)
                         .then(() => {
                             history.push("/locations")
                         })
-                }}>Delete Location
+                }}>Destroy Location
             </button>
+            <button type="button" onClick={() => {
+                history.push(`/locations/edit/${location.id}`)
+            }}>Edit</button>
         </section>
     )
 }

@@ -1,23 +1,55 @@
-import React, { useContext, useRef, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { LocationContext } from "../location/LocationProvider"
 import "./Location.css"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 export const LocationForm = (props) => {
-    const { addLocation } = useContext(LocationContext)
+    const { addLocation, getLocationById, updateLocation } = useContext(LocationContext)
 
-    const name = useRef(null)
-    const address = useRef(null)
+    const [location, setLocation] = useState({})
+    const [isLoading, setIsLoading] = useState(true);
 
-    const constructNewLocation = () => {
-        addLocation({
-            name: name.current.value,
-            address: address.current.value
-        })
-            .then(() => history.push("/locations"))
+    const { locationId } = useParams();
+    const history = useHistory();
+
+    const handleControlledInputChange = (event) => {
+        const newLocation = { ...location }
+        newLocation[event.target.name] = event.target.value
+        setLocation(newLocation)
     }
 
-    const history = useHistory()
+    useEffect(() => {
+        if (locationId) {
+            getLocationById(locationId)
+                .then(location => {
+                    setLocation(location)
+                    setIsLoading(false)
+                })
+        } else {
+            setIsLoading(false)
+        }
+    }, [])
+
+    const constructLocationObject = () => {
+        setIsLoading(false);
+        if (locationId) {
+            updateLocation({
+                id: location.id,
+                name: location.name,
+                address: location.address
+            })
+                .then(() => history.push(`/locations/detail/${location.id}`))
+        } else {
+            addLocation({
+                name: location.name,
+                address: location.address
+            })
+                .then(() => history.push("locations"))
+        }
+    }
+
+
+
 
     return (
         <form className="locationForm">
@@ -25,23 +57,29 @@ export const LocationForm = (props) => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="locationName">Location name: </label>
-                    <input type="text" id="locationName" ref={name} required autoFocus className="form-control" placeholder="location name" />
+                    <input type="text" id="locationName" name="name" required autoFocus className="form-control"
+                        placeholder="Location name"
+                        onChange={handleControlledInputChange}
+                        defaultValue={location.name} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="locationAddress">Location address: </label>
-                    <input type="text" id="locationAddress" ref={address} required className="form-control" placeholder="location address" />
+                    <input type="text" id="locationAddress" name="address" required autoFocus className="form-control"
+                        placeholder="Location address"
+                        onChange={handleControlledInputChange}
+                        defaultValue={location.address} />
                 </div>
             </fieldset>
-            <button type="button"
-                onClick={evt => {
-                    
-                    constructNewLocation()
-                }}
-                className="btn btn-primary">
-                Save Location
-            </button>
+            <button type="submit"
+                className="btn btn-primary"
+                disabled={isLoading}
+                onClick={event => {
+                    event.preventDefault() // Prevent browser from submitting the form
+                    constructLocationObject()
+                }}>
+                {locationId ? <>Save Location</> : <>Add Location</>}</button>
         </form>
     )
 }

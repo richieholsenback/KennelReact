@@ -13,6 +13,41 @@
       "breed": "Mutt",
       "customerId": 1,
       "locationId": 2
+    },
+    {
+      "id": 4,
+      "name": "Tim Duncan",
+      "breed": "Spur",
+      "locationId": 3,
+      "customerId": 3
+    },
+    {
+      "id": 5,
+      "name": "John Stockton",
+      "breed": "Jazz Musician",
+      "locationId": 3,
+      "customerId": 1
+    },
+    {
+      "id": 6,
+      "name": "Dominique Wilkins",
+      "breed": "Hawk",
+      "locationId": 2,
+      "customerId": 3
+    },
+    {
+      "name": "Squirtle",
+      "breed": "Squirrel-Turtle",
+      "locationId": 1,
+      "customerId": 4,
+      "id": 7
+    },
+    {
+      "name": "Ballak Pajamas",
+      "breed": "Pres",
+      "locationId": 1,
+      "customerId": 2,
+      "id": 8
     }
   ],
   "customers": [
@@ -60,6 +95,21 @@
       "name": "Kate McKinnon",
       "locationId": 3,
       "id": 4
+    },
+    {
+      "name": "Dame",
+      "locationId": 3,
+      "id": 5
+    },
+    {
+      "name": "Kerryon",
+      "locationId": 1,
+      "id": 6
+    },
+    {
+      "name": "Trae",
+      "locationId": 2,
+      "id": 7
     }
   ],
   "locations": [
