@@ -90,6 +90,16 @@ export const ApplicationViews = (props) => {
                     <EmployeeDetail />
                 </Route>
             </EmployeeProvider>
+
+            <AnimalProvider>
+                <LocationProvider>
+                    <CustomerProvider>
+                    <Route path="/animals/edit/:animalId(\d+)">
+                        <AnimalForm />
+                    </Route>
+                    </CustomerProvider>
+                </LocationProvider>
+            </AnimalProvider>
         </>
     )
 }
