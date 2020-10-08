@@ -10,8 +10,6 @@ export const LocationCard = ({ location, employees, animals }) => (
                 {location.name}
             </Link>
         </h3>
-        <div className="location__employees">{employees.length} employees</div>
-        <div className="location__animals">{animals.length} animals</div>
     </section>
 
     </>
